@@ -25,6 +25,7 @@
   <body>
     <div id="container">
       <div id="info"></div>
+      <div id="info2"></div>
       <div id="player"></div>
     </div>
 
@@ -242,6 +243,7 @@
           Controls        => ${controls}`);
 
           if (title) document.getElementById('info').innerHTML = `<span id="songTitle">${player.playerInfo.videoData.title}</span> <span id="songAuthor">${player.playerInfo.videoData.author}</span>`;
+          if (title) document.getElementById('info2').innerHTML = `<span id="songTitle">${player.playerInfo.videoData.title}</span> <span id="songAuthor">${player.playerInfo.videoData.author}</span>`;
 
           player.playVideo();
 
