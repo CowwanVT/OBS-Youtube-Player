@@ -8,13 +8,23 @@
       }
       body {
         background: none;
+        text-align: left;
+        font-family: "Helvetica", "Helvetica Neue" ;
+        font-weight: bold;
+        font-Size: 32px;
+        color: white ;
+        padding: 10px;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        margin: auto;
+        paint-order: stroke fill;      
       }
     </style>
   </head>
   <body>
     <div id="container">
       <div id="info"></div>
-      <div id="info2"></div>
       <div id="player"></div>
     </div>
 
@@ -232,7 +242,6 @@
           Controls        => ${controls}`);
 
           if (title) document.getElementById('info').innerHTML = `<span id="songTitle">${player.playerInfo.videoData.title}</span> <span id="songAuthor">${player.playerInfo.videoData.author}</span>`;
-          if (title) document.getElementById('info2').innerHTML = `<span id="songTitle">${player.playerInfo.videoData.title}</span> <span id="songAuthor">${player.playerInfo.videoData.author}</span>`;
 
           player.playVideo();
 
