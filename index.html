@@ -256,8 +256,8 @@
           HideWhenStopped => ${hideWhenStopped}
           Controls        => ${controls}`);
 
-          if (title) document.getElementById('info').innerHTML = `<span id="songTitle">${player.playerInfo.videoData.title}</span> <span id="songAuthor">${player.playerInfo.videoData.author}</span>`;
-          if (title) document.getElementById('info2').innerHTML = `<span id="songTitle">${player.playerInfo.videoData.title}</span> <span id="songAuthor">${player.playerInfo.videoData.author}</span>`;
+          if (title) document.getElementById('info').innerHTML = ` <span id="songTitle">${player.playerInfo.videoData.title}</span></span>`;
+          if (title) document.getElementById('info2').innerHTML = ` <span id="songTitle">${player.playerInfo.videoData.title}</span></span>`;
 
           player.playVideo();
 
