@@ -234,10 +234,10 @@
         }
 
         function onAir() {
-          debug(`On air : ${player.playerInfo.videoData.title} by ${
-            player.playerInfo.videoData.author
+          debug(`On air : ${player.v.videoData.title} by ${
+            player.v.videoData.author
           }
-          Video Id        => ${player.playerInfo.videoData.video_id}
+          Video Id        => ${player.v.videoData.video_id}
           Queue position  => ${player.getPlaylistIndex() + 1}/${
             player.getPlaylist() ? player.getPlaylist().length : "null"
           }
@@ -256,8 +256,8 @@
           HideWhenStopped => ${hideWhenStopped}
           Controls        => ${controls}`);
 
-          if (title) document.getElementById('info').innerHTML = `  <span id="songAuthor">${player.playerInfo.videoData.author}</span> - <span id="songTitle">${player.playerInfo.videoData.title}</span></span>`;
-          if (title) document.getElementById('info2').innerHTML = `  <span id="songAuthor">${player.playerInfo.videoData.author}</span> - <span id="songTitle">${player.playerInfo.videoData.title}</span></span>`;
+          if (title) document.getElementById('info').innerHTML = `  <span id="songAuthor">${player.v.videoData.author}</span> - <span id="songTitle">${player.v.videoData.title}</span></span>`;
+          if (title) document.getElementById('info2').innerHTML = `  <span id="songAuthor">${player.v.videoData.author}</span> - <span id="songTitle">${player.v.videoData.title}</span></span>`;
 
           player.playVideo();
 
@@ -267,7 +267,7 @@
             player.setVolume(volume);
           }
         }
-
+videoData
         let fadeAlreadyDone = false;
         function fading() {
           player.setVolume(0);
