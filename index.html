@@ -237,7 +237,6 @@
           debug(`On air : ${player.v.videoData.title} by ${
             player.v.videoData.author
           }
-          console.log(${player.v});
           Video Id        => ${player.v.videoData.video_id}
           Queue position  => ${player.getPlaylistIndex() + 1}/${
             player.getPlaylist() ? player.getPlaylist().length : "null"
@@ -255,7 +254,10 @@
           Width           => ${width}px
           HideVideo       => ${hide}
           HideWhenStopped => ${hideWhenStopped}
-          Controls        => ${controls}`);
+          Controls        => ${controls}`)
+
+          
+          console.log(${player.v});
 
           if (title) document.getElementById('info').innerHTML = `  <span id="songAuthor">${player.v.videoData.author}</span> - <span id="songTitle">${player.v.videoData.title}</span></span>`;
           if (title) document.getElementById('info2').innerHTML = `  <span id="songAuthor">${player.v.videoData.author}</span> - <span id="songTitle">${player.v.videoData.title}</span></span>`;
